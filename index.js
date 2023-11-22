@@ -26,7 +26,11 @@ const operatorProblem = (inputArray) => {
         operandTwoBrackets
     } = applyBrackets(inputArray)
 
-    return `${operandOneBrackets ? `(${operatorProblem(inputArray[1])})` : operatorProblem(inputArray[1])} ${operatorProblem(inputArray[0])} ${operandTwoBrackets ? `(${operatorProblem(inputArray[2])})` : operatorProblem(inputArray[2])}`
+    return `
+    ${operandOneBrackets ? `(${operatorProblem(inputArray[1])})` : operatorProblem(inputArray[1])} 
+    ${operatorProblem(inputArray[0])} 
+    ${operandTwoBrackets ? `(${operatorProblem(inputArray[2])})` : operatorProblem(inputArray[2])}
+    `
 }
 
 console.log(operatorProblem(testCase1))
